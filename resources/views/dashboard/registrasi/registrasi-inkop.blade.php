@@ -106,7 +106,7 @@
                                             class="feather feather-home">
                                             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                                             <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                        </svg> Data Primkop</button>
+                                        </svg> Data Puskop</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link disabled" id="animated-underline-profile-tab"
@@ -210,23 +210,23 @@
                                                         </div>
                                                         <div class="col-lg-12 col-md-8 mt-md-0 mt-4 mt-2"
                                                             id="form-koperasi" hidden>
-                                                            <h6 class="">Data Primkop</h6>
+                                                            <h6 class="">Data Puskop</h6>
                                                             <div class="form">
-                                                                <button type="button" onclick="tambahPrimkopBtn()"
+                                                                <button type="button" onclick="tambahPuskopBtn()"
                                                                     class="btn btn-success mb-3">Tambah Data</button>
                                                                 <div>
                                                                     <table class="table">
                                                                         <thead>
                                                                             <tr>
                                                                                 <th scope="col">#</th>
-                                                                                <th scope="col">Nama Primkop</th>
+                                                                                <th scope="col">Nama Puskop</th>
                                                                                 <th scope="col">Email Koperasi</th>
                                                                                 <th scope="col">Nama Ketua</th>
                                                                                 <th scope="col">Nomor HP</th>
                                                                                 <th scope="col">Aksi</th>
                                                                             </tr>
                                                                         </thead>
-                                                                        <tbody id="primkopList">
+                                                                        <tbody id="puskopList">
 
                                                                     </table>
                                                                 </div>
@@ -884,9 +884,9 @@
         // let tingkatan_koperasi;
         let koperasi;
         let id_koperasi;
-        let primkopData = [];
-        let list_primkop = @json($list_primkop);
-        console.log(list_primkop)
+        let puskopData = [];
+        let list_puskop = @json($list_puskop);
+        console.log(list_puskop)
         let pengurusData = [];
         let pengawasData = [];
         const npwpInput = document.getElementById('foto_npwp');
@@ -905,7 +905,7 @@
         window.addEventListener("load", () => {
             nis = '{{ $nis }}';
             getProvince();
-            renderPrimkopList();
+            renderPuskopList();
         });
 
         function confirm() {
@@ -962,48 +962,48 @@
             }
         }
 
-        function renderPrimkopList() {
-            const primkopList = document.getElementById('primkopList');
-            primkopList.innerHTML = ''; // Mengosongkan isi elemen sebelum dirender ulang
+        function renderPuskopList() {
+            const puskopList = document.getElementById('puskopList');
+            puskopList.innerHTML = ''; // Mengosongkan isi elemen sebelum dirender ulang
 
-            // Render list_primkop
-            list_primkop.forEach((primkop, index) => {
+            // Render list_puskop
+            list_puskop.forEach((puskop, index) => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
             <td>${index + 1}</td>
-            <td>${primkop.nama_koperasi}</td>
-            <td>${primkop.email_koperasi}</td>
-            <td>${primkop.nama_pengurus}</td>
-            <td>${primkop.nomor_hp}</td>
+            <td>${puskop.nama_koperasi}</td>
+            <td>${puskop.email_koperasi}</td>
+            <td>${puskop.nama_pengurus}</td>
+            <td>${puskop.nomor_hp}</td>
         `;
-                primkopList.appendChild(row);
+                puskopList.appendChild(row);
             });
 
-            // Render primkopData dengan penomoran yang dilanjutkan dari list_primkop
-            primkopData.forEach((primkop, index) => {
-                const rowIndex = index + list_primkop.length + 1; // Adjust numbering based on length of list_primkop
+            // Render puskopData dengan penomoran yang dilanjutkan dari list_puskop
+            puskopData.forEach((puskop, index) => {
+                const rowIndex = index + list_puskop.length + 1; // Adjust numbering based on length of list_puskop
                 const row = document.createElement('tr');
                 row.innerHTML = `
             <td>${rowIndex}</td>
-            <td>${primkop.nama_koperasi}</td>
-            <td>${primkop.email_koperasi}</td>
-            <td>${primkop.nama_ketua}</td>
-            <td>${primkop.nomor_ketua}</td>
+            <td>${puskop.nama_koperasi}</td>
+            <td>${puskop.email_koperasi}</td>
+            <td>${puskop.nama_ketua}</td>
+            <td>${puskop.nomor_ketua}</td>
             <td>
-                <button class="btn btn-warning btn-sm" type="button" onclick="editPrimkop(${index}, 'primkopData')">Edit</button>
-                <button class="btn btn-danger btn-sm" type="button" onclick="deletePrimkop(${index}, 'primkopData')">Delete</button>
+                <button class="btn btn-warning btn-sm" type="button" onclick="editPuskop(${index}, 'puskopData')">Edit</button>
+                <button class="btn btn-danger btn-sm" type="button" onclick="deletePuskop(${index}, 'puskopData')">Delete</button>
             </td>
         `;
-                primkopList.appendChild(row);
+                puskopList.appendChild(row);
             });
         }
 
 
-        function tambahPrimkopBtn() {
+        function tambahPuskopBtn() {
             Swal.fire({
-                title: "Tambah Primkop",
+                title: "Tambah Puskop",
                 html: `
-            <input id="swal-input1" class="swal2-input" placeholder="Nama Primkop">
+            <input id="swal-input1" class="swal2-input" placeholder="Nama Puskop">
             <input id="swal-input2" class="swal2-input" placeholder="Email Koperasi">
             <input id="swal-input3" class="swal2-input" placeholder="Nama Ketua">
             <input id="swal-input4" class="swal2-input" placeholder="Nomor HP">
@@ -1037,28 +1037,28 @@
                         nomor_ketua
                     } = result.value;
 
-                    primkopData.push({
+                    puskopData.push({
                         nama_koperasi: nama_koperasi,
                         email_koperasi: email_koperasi,
                         nama_ketua: nama_ketua,
                         nomor_ketua: nomor_ketua,
                     });
 
-                    renderPrimkopList();
-                    console.log(primkopData);
+                    renderPuskopList();
+                    console.log(puskopData);
                 }
             });
         }
 
-        function editPrimkop(index) {
-            const primkop = primkopData[index];
+        function editPuskop(index) {
+            const puskop = puskopData[index];
             Swal.fire({
-                title: "Edit Primkop",
+                title: "Edit Puskop",
                 html: `
-            <input id="swal-input1" class="swal2-input" value="${primkop.nama_koperasi}" placeholder="Nama Primkop">
-            <input id="swal-input2" class="swal2-input" value="${primkop.email_koperasi}" placeholder="Email Koperasi">
-            <input id="swal-input3" class="swal2-input" value="${primkop.nama_ketua}" placeholder="Nama Ketua">
-            <input id="swal-input4" class="swal2-input" value="${primkop.nomor_ketua}" placeholder="Nomor HP">
+            <input id="swal-input1" class="swal2-input" value="${puskop.nama_koperasi}" placeholder="Nama Puskop">
+            <input id="swal-input2" class="swal2-input" value="${puskop.email_koperasi}" placeholder="Email Koperasi">
+            <input id="swal-input3" class="swal2-input" value="${puskop.nama_ketua}" placeholder="Nama Ketua">
+            <input id="swal-input4" class="swal2-input" value="${puskop.nomor_ketua}" placeholder="Nomor HP">
         `,
                 showCancelButton: true,
                 confirmButtonText: "Update",
@@ -1089,22 +1089,22 @@
                         nomor_ketua
                     } = result.value;
 
-                    primkopData[index] = {
+                    puskopData[index] = {
                         nama_koperasi,
                         email_koperasi,
                         nama_ketua,
                         nomor_ketua,
                     };
-                    console.log(primkopData)
-                    renderPrimkopList();
-                    Swal.fire('Updated!', 'Data Primkop telah diperbarui.', 'success');
+                    console.log(puskopData)
+                    renderPuskopList();
+                    Swal.fire('Updated!', 'Data Puskop telah diperbarui.', 'success');
                 }
             });
         }
 
-        function deletePrimkop(index) {
-            primkopData.splice(index, 1);
-            renderPrimkopList();
+        function deletePuskop(index) {
+            puskopData.splice(index, 1);
+            renderPuskopList();
         }
 
         function renderPengurusList() {
@@ -1492,10 +1492,10 @@
 
         async function submitNext() {
             let data = {
-                koperasiData: primkopData,
+                koperasiData: puskopData,
                 nis: nis
             };
-            if (list_primkop.length > 0 && primkopData.length == 0) {
+            if (list_puskop.length > 0 && puskopData.length == 0) {
                 const activeTab = document.querySelector('#animateLine .nav-link.active');
 
                 // Mendapatkan tab berikutnya
