@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Account Settings | CORK - Multipurpose Bootstrap Dashboard Template </title>
-    <link rel="icon" type="image/x-icon" href="/assets/dashboard/src/assets/img/favicon.ico" />
+    <title> Registrasi Primkop - RKI </title>
+    <link rel="shortcut icon" href="{{ asset('assets/img/logo-fav-icon.png') }}" type="image/x-icon" />
     <link href="/assets/dashboard/layouts/modern-light-menu/css/light/loader.css" rel="stylesheet" type="text/css" />
     <link href="/assets/dashboard/layouts/modern-light-menu/css/dark/loader.css" rel="stylesheet" type="text/css" />
     <script src="/assets/dashboard/layouts/modern-light-menu/loader.js"></script>

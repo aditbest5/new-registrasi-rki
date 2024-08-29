@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Account Settings | CORK - Multipurpose Bootstrap Dashboard Template </title>
-    <link rel="icon" type="image/x-icon" href="/assets/dashboard/src/assets/img/favicon.ico" />
+    <title> Registrasi Anggota - RKI</title>
+    <link rel="shortcut icon" href="{{ asset('assets/img/logo-fav-icon.png') }}" type="image/x-icon" />
     <link href="/assets/dashboard/layouts/modern-light-menu/css/light/loader.css" rel="stylesheet" type="text/css" />
     <link href="/assets/dashboard/layouts/modern-light-menu/css/dark/loader.css" rel="stylesheet" type="text/css" />
     <script src="/assets/dashboard/layouts/modern-light-menu/loader.js"></script>
@@ -17,6 +17,8 @@
     <link href="/assets/dashboard/src/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="/assets/dashboard/layouts/modern-light-menu/css/light/plugins.css" rel="stylesheet" type="text/css" />
     <link href="/assets/dashboard/layouts/modern-light-menu/css/dark/plugins.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!--  BEGIN CUSTOM STYLE FILE  -->
@@ -99,76 +101,37 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active disabled" id="animated-underline-home-tab"
                                         data-bs-toggle="tab" href="#animated-underline-home" role="tab"
-                                        aria-controls="animated-underline-home" aria-selected="true"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="feather feather-home">
-                                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                        </svg> Data Diri anggota</button>
+                                        aria-controls="animated-underline-home" aria-selected="true">
+                                        <i data-feather="user" class="mx-2"></i>Data Diri Anggota
+                                    </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link disabled" id="animated-underline-profile-tab"
                                         data-bs-toggle="tab" href="#animated-underline-profile" role="tab"
                                         aria-controls="animated-underline-profile" aria-selected="false"
-                                        tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="feather feather-dollar-sign">
-                                            <line x1="12" y1="1" x2="12" y2="23">
-                                            </line>
-                                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                                        </svg> Data Alamat</button>
+                                        tabindex="-1"><i data-feather="home" class="mx-2"></i>Data Alamat</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link disabled" id="animated-pengurus-tab" data-bs-toggle="tab"
                                         href="#animated-pengurus" role="tab" aria-controls="animated-pengurus"
-                                        aria-selected="false" tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg"
-                                            width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-dollar-sign">
-                                            <line x1="12" y1="1" x2="12" y2="23">
-                                            </line>
-                                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                                        </svg> Data Keluarga</button>
+                                        aria-selected="false" tabindex="-1"><i data-feather="users" class="mx-2"></i>Data Keluarga </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link disabled" id="animated-pengawas-tab" data-bs-toggle="tab"
                                         href="#animated-pengawas" role="tab" aria-controls="animated-pengawas"
-                                        aria-selected="false" tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg"
-                                            width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-dollar-sign">
-                                            <line x1="12" y1="1" x2="12" y2="23">
-                                            </line>
-                                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                                        </svg>  Data Pendidikan</button>
+                                        aria-selected="false" tabindex="-1"><i data-feather="book-open" class="mx-2"></i>Riwayat Pendidikan Terakhir</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link disabled" id="animated-underline-preferences-tab"
                                         data-bs-toggle="tab" href="#animated-underline-preferences" role="tab"
                                         aria-controls="animated-underline-preferences" aria-selected="false"
-                                        tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="feather feather-user">
-                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                            <circle cx="12" cy="7" r="4"></circle>
-                                        </svg> Data Pekerjaan</button>
+                                        tabindex="-1"><i data-feather="briefcase" class="mx-2"></i> Riwayat Pekerjaan</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link disabled" id="animated-underline-contact-tab"
                                         data-bs-toggle="tab" href="#animated-underline-contact" role="tab"
                                         aria-controls="animated-underline-contact" aria-selected="false"
-                                        tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="feather feather-phone">
-                                            <path
-                                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                                            </path>
-                                        </svg> Data Pasangan </button>
+                                        tabindex="-1"><i data-feather="users" class="mx-2"></i>  Data Pasangan </button>
                                 </li>
                             </ul>
                         </div>
@@ -208,9 +171,9 @@
 
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-12 col-md-8 mt-md-0 mt-4" id="form-anggota"
+                                                        <div class="col-lg-12 col-md-8 mt-md-0 mt-5" id="form-anggota"
                                                             hidden>
-                                                            <h6>Data Lengkap</h6>
+                                                            <h6 class="mt-3">Data Lengkap</h6>
                                                             <div class="form">
                                                                 <div class="row">
                                                                     <div class="col-md-6">
@@ -340,16 +303,44 @@
                                                                                 class="form-control mb-3">
                                                                                 <option value="00" hidden>Pilih
                                                                                     Agama</option>
-                                                                                <option value="islam">Islam</option>
-                                                                                <option value="protestan">Protestan
+                                                                                <option value="Islam">Islam</option>
+                                                                                <option value="Protestan">Protestan
                                                                                 </option>
-                                                                                <option value="katolik">Katolik
+                                                                                <option value="Katolik">Katolik
                                                                                 </option>
-                                                                                <option value="hindu">Hindu</option>
-                                                                                <option value="buddha">Buddha</option>
-                                                                                <option value="konghucu">Konghucu
+                                                                                <option value="Hindu">Hindu</option>
+                                                                                <option value="Buddha">Buddha</option>
+                                                                                <option value="Konghucu">Konghucu
                                                                                 </option>
-                                                                                <option value="lainnya">Lainnya
+                                                                                <option value="Lainnya">Lainnya
+                                                                                </option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label for="pendidikan_terakhir">Pendidikan
+                                                                                Terakhir</label>
+                                                                            <select name="pendidikan_terakhir"
+                                                                                id="pendidikan_terakhir"
+                                                                                class="form-control mb-3">
+                                                                                <option value="00" hidden>Pilih
+                                                                                    Jenjang Pendidikan</option>
+                                                                                <option value="SD">SD/Sederajat
+                                                                                </option>
+                                                                                <option value="SMP">SMP/Sedejarat
+                                                                                </option>
+                                                                                <option value="SMA">SMA/Sederajat
+                                                                                </option>
+                                                                                <option value="Diploma">Diploma
+                                                                                </option>
+                                                                                <option value="S1">S1
+                                                                                </option>
+                                                                                <option value="S2">S2
+                                                                                </option>
+                                                                                <option value="S3">S3
+                                                                                </option>
+                                                                                <option value="Tidak Ada">Tidak Ada
                                                                                 </option>
                                                                             </select>
                                                                         </div>
@@ -363,13 +354,13 @@
                                                                                 class="form-control mb-3">
                                                                                 <option value="00" hidden>Pilih
                                                                                     Status Perkawinan</option>
-                                                                                <option value="belum kawin">Belum Kawin
+                                                                                <option value="Belum Kawin">Belum Kawin
                                                                                 </option>
-                                                                                <option value="sudah kawin">Sudah Kawin
+                                                                                <option value="Sudah Kawin">Sudah Kawin
                                                                                 </option>
-                                                                                <option value="cerai mati">Cerai Mati
+                                                                                <option value="Cerai Mati">Cerai Mati
                                                                                 </option>
-                                                                                <option value="cerai hidup">Cerai Hidup
+                                                                                <option value="Cerai Hidup">Cerai Hidup
                                                                                 </option>
                                                                             </select>
                                                                         </div>
@@ -377,11 +368,22 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group">
                                                                             <label for="pekerjaan">Pekerjaan</label>
-                                                                            <input type="text"
+                                                                            <select type="text"
                                                                                 class="form-control mb-3"
                                                                                 id="pekerjaan"
-                                                                                placeholder="Masukan No Anggota"
+                                                                                placeholder="Masukan Pekerjaan Terkini"
                                                                                 value="">
+                                                                                <option value="00" hidden>Pilih
+                                                                                    Pekerjaan</option>
+                                                                                <option value="Wiraswasta/Wirausaha">
+                                                                                    Wiraswasta/Wirausaha</option>
+                                                                                <option value="PNS/TNI/Polri">PNS/TNI/Polri
+                                                                                </option>
+                                                                                <option value="Pegawai Swasta">Pegawai Swasta
+                                                                                </option>
+                                                                                <option value="Tidak Bekerja">Tidak Bekerja
+                                                                                </option>
+                                                                            </select>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6">
@@ -391,7 +393,7 @@
                                                                             <input type="text"
                                                                                 class="form-control mb-3"
                                                                                 id="kewarganegaraan"
-                                                                                placeholder="Masukan No Anggota"
+                                                                                placeholder="Masukan Kewarganegaraan"
                                                                                 value="">
                                                                         </div>
                                                                     </div>
@@ -495,9 +497,10 @@
                                                                             id="kode_pos" class="form-control mb-3"
                                                                             placeholder="Masukan Kode Pos" />
                                                                     </div>
-                                                                    <div class="col-md-12 mt-1 d-flex justify-content-center gap-4">
-                                                                        {{-- <button type="button" onclick="previousBtn()"
-                                                                            class="btn btn-secondary">Previous</button> --}}
+                                                                    <div
+                                                                        class="col-md-12 mt-1 d-flex justify-content-center gap-4">
+                                                                        <button type="button" onclick="previousBtn()"
+                                                                            class="btn btn-secondary">Previous</button>
                                                                         <button type="button" onclick="nextBtn()"
                                                                             class="btn btn-secondary">Next</button>
                                                                     </div>
@@ -523,9 +526,19 @@
                                                     <div class="row">
                                                         <div class="col-lg-12 col-md-8 mt-md-0 mt-4">
                                                             <div class="form">
-                                                                <h6>Data Pendidikan</h6>
+                                                                <h6>Data Pendidikan Terakhir</h6>
                                                                 <div class="row">
-                                                                    <div class="col-lg-12 col-md-8 mt-md-0 mt-4 mt-2">
+                                                                    <div id="pendidikanSection1"
+                                                                        class="col-lg-12 col-md-8 mt-md-0 mt-4 mt-2"
+                                                                        style="display: none;">
+                                                                        <div class="form">
+                                                                            <h6 class="text-info">*)Anda bisa melewati
+                                                                                bagian ini</h6>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="pendidikanSection2"
+                                                                        class="col-lg-12 col-md-8 mt-md-0 mt-4 mt-2"
+                                                                        style="display: block;">
                                                                         <div class="form">
                                                                             <button type="button"
                                                                                 onclick="tambahPendidikanBtn()"
@@ -537,7 +550,8 @@
                                                                                         <tr>
                                                                                             <th scope="col">#
                                                                                             </th>
-                                                                                            <th scope="col">Nama Institusi</th>
+                                                                                            <th scope="col">Nama
+                                                                                                Institusi</th>
                                                                                             <th scope="col">
                                                                                                 Jurusan
                                                                                             </th>
@@ -596,7 +610,8 @@
                                                                                         <tr>
                                                                                             <th scope="col">#
                                                                                             </th>
-                                                                                            <th scope="col">Nama Keluarga</th>
+                                                                                            <th scope="col">Nama
+                                                                                                Keluarga</th>
                                                                                             <th scope="col">
                                                                                                 Pendidikan
                                                                                             </th>
@@ -641,13 +656,41 @@
                                                     <div class="row">
                                                         <div class="col-lg-12 col-md-8 mt-md-0 mt-4">
                                                             <div class="form">
-                                                                <h6>Data Pekerjaan</h6>
+                                                                <h6>Data Riwayat Pekerjaan</h6>
                                                                 <div class="row">
-                                                                    <div class="col-lg-12 col-md-8 mt-md-0 mt-4 mt-2">
+                                                                    <div class="col-lg-12 col-md-8 mt-md-0 mt-4 mt-2"
+                                                                        style="display: none;" id="questionContent">
+                                                                        <div class="form">
+                                                                            <label>Apakah Anda sudah pernah bekerja /
+                                                                                berwirausaha?</label>
+                                                                            <div
+                                                                                class="d-flex justify-content-start align-items-center gap-2">
+                                                                                <input type="checkbox"
+                                                                                    name="pekerjaan_choice"
+                                                                                    class="form-check"
+                                                                                    value="laki-laki"
+                                                                                    id="checkboxYa" />
+                                                                                Ya
+                                                                            </div>
+
+                                                                            <div
+                                                                                class="d-flex justify-content-start align-items-center gap-2">
+                                                                                <input type="checkbox"
+                                                                                    name="pekerjaan_choice"
+                                                                                    class="form-check"
+                                                                                    value="perempuan"
+                                                                                    id="checkboxTidak" />
+                                                                                Tidak
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div id="pekerjaanContent" style="display: block;"
+                                                                        class="col-lg-12 col-md-8 mt-md-0 mt-5 mt-5">
                                                                         <div class="form">
                                                                             <button type="button"
                                                                                 onclick="tambahPekerjaanBtn()"
-                                                                                class="btn btn-success mb-3">Tambah
+                                                                                class="btn btn-success mb-3 mt-3">Tambah
                                                                                 Data</button>
                                                                             <div>
                                                                                 <table class="table">
@@ -655,14 +698,19 @@
                                                                                         <tr>
                                                                                             <th scope="col">#
                                                                                             </th>
-                                                                                            <th scope="col">Nama Perusahaan</th>
+                                                                                            <th scope="col">Nama
+                                                                                                Perusahaan</th>
                                                                                             <th scope="col">
                                                                                                 Alamat Perusahaan
                                                                                             </th>
                                                                                             <th scope="col">
-                                                                                                Periode Kerja Awal</th>
-                                                                                            <th scope="col">Periode Kerja Akhir</th>
-                                                                                            <th scope="col">Gaji Terakhir</th>
+                                                                                                Periode Kerja Awal
+                                                                                            </th>
+                                                                                            <th scope="col">
+                                                                                                Periode Kerja Akhir
+                                                                                            </th>
+                                                                                            <th scope="col">Gaji
+                                                                                                Terakhir</th>
                                                                                             <th scope="col">Aksi
                                                                                             </th>
                                                                                         </tr>
@@ -706,7 +754,8 @@
                                                                 <div class="row">
                                                                     <div class="col-md-6">
                                                                         <div class="form-group">
-                                                                            <label for="nama_pasangan">Nama Suami/Istri</label>
+                                                                            <label for="nama_pasangan">Nama
+                                                                                Suami/Istri</label>
                                                                             <input type="text"
                                                                                 class="form-control mb-3"
                                                                                 id="nama_pasangan"
@@ -715,7 +764,8 @@
                                                                     </div>
                                                                     <div class="col-md-6">
                                                                         <div class="form-group">
-                                                                            <label for="usia_pasangan">Usia Suami/Istri</label>
+                                                                            <label for="usia_pasangan">Usia
+                                                                                Suami/Istri</label>
                                                                             <input type="number"
                                                                                 class="form-control mb-3"
                                                                                 id="usia_pasangan"
@@ -724,7 +774,8 @@
                                                                     </div>
                                                                     <div class="col-md-6">
                                                                         <div class="form-group">
-                                                                            <label for="pekerjaan_pasangan">Pekerjaan Suami/Istri</label>
+                                                                            <label for="pekerjaan_pasangan">Pekerjaan
+                                                                                Suami/Istri</label>
                                                                             <input type="text"
                                                                                 class="form-control mb-3"
                                                                                 id="pekerjaan_pasangan"
@@ -733,7 +784,8 @@
                                                                     </div>
                                                                     <div class="col-md-6">
                                                                         <div class="form-group">
-                                                                            <label for="pendidikan_pasangan">Pendidikan Suami/Istri</label>
+                                                                            <label for="pendidikan_pasangan">Pendidikan
+                                                                                Suami/Istri</label>
                                                                             <input type="text"
                                                                                 class="form-control mb-3"
                                                                                 id="pendidikan_pasangan"
@@ -796,10 +848,54 @@
         let anggotaKeluarga = [];
         let pendidikanData = [];
         let pekerjaanData = [];
+        const pekerjaanChoice = document.getElementById("pekerjaan");
+        const questionContent = document.getElementById("questionContent");
+        const checkboxYa = document.getElementById('checkboxYa');
+        const checkboxTidak = document.getElementById('checkboxTidak');
+        const pekerjaanContent = document.getElementById('pekerjaanContent');
+        const pendidikanTerakhir = document.getElementById('pendidikan_terakhir');
+        const pendidikanSection1 = document.getElementById("pendidikanSection1")
+        const pendidikanSection2 = document.getElementById("pendidikanSection2")
+
 
         window.addEventListener("load", () => {
             nis = '{{ $nis }}';
             getProvince();
+        });
+        pendidikanTerakhir.addEventListener('change', function() {
+            console.log(this.value)
+            if (this.value == "Tidak Ada") {
+                pendidikanSection1.style.display = 'block'
+                pendidikanSection2.style.display = 'none';
+            } else {
+                pendidikanSection1.style.display = 'none';
+                pendidikanSection2.style.display = 'block';
+            }
+        });
+        pekerjaanChoice.addEventListener('change', function() {
+            console.log(this.value)
+            if (this.value == "Tidak Bekerja") {
+                questionContent.style.display = 'block'
+                pekerjaanContent.style.display = 'none';
+            } else {
+                questionContent.style.display = 'none';
+                pekerjaanContent.style.display = 'block';
+            }
+        });
+        checkboxYa.addEventListener('change', function() {
+            if (this.checked) {
+                checkboxTidak.checked = false;
+                pekerjaanContent.style.display = 'block';
+            } else {
+                pekerjaanContent.style.display = 'none';
+            }
+        });
+
+        checkboxTidak.addEventListener('change', function() {
+            if (this.checked) {
+                checkboxYa.checked = false;
+                pekerjaanContent.style.display = 'none';
+            }
         });
 
         function confirm() {
@@ -809,7 +905,13 @@
                 .then(data => {
                     console.log(data)
                     if (data.response_code !== '00') {
-                        alert(data.response_message);
+
+                        Swal.fire({
+                            title: "Perhatian!",
+                            text: data.response_message,
+                            icon: "info",
+                            confirmButtonText: "OK"
+                        });
                     } else {
                         document.getElementById('nama_lengkap').value = data.response_message.nama_lengkap;
                         document.getElementById('email').value = data.response_message.email;
@@ -909,7 +1011,7 @@
                     const tempat_lahir = document.getElementById('swal-input4').value;
                     const tanggal_lahir = document.getElementById('swal-input5').value;
 
-                    if (!nama_keluarga || !status || !pendidikan || !tempat_lahir || !tanggal_lahir ) {
+                    if (!nama_keluarga || !status || !pendidikan || !tempat_lahir || !tanggal_lahir) {
                         Swal.showValidationMessage('Semua bidang harus diisi');
                         return false;
                     }
@@ -953,9 +1055,9 @@
                 html: `
            <input id="swal-input1" class="swal2-input" value="${anggota.nama_keluarga}" placeholder="Masukan nama anggota keluarga">
             <select id="swal-input2" class="swal2-select" placeholder="Masukan Status Anggota Keluarga">
-                <option value="ayah" ${anggota.status=='ayah'? 'selected': ''}>Ayah</option>
-                <option value="ibu" ${anggota.status=='ibu'? 'selected': ''}>Ibu</option>
-                <option value="anak" ${anggota.status=='anak'? 'selected': ''}>Anak</option>
+                <option value="Ayah" ${anggota.status=='ayah'? 'selected': ''}>Ayah</option>
+                <option value="Ibu" ${anggota.status=='ibu'? 'selected': ''}>Ibu</option>
+                <option value="Anak" ${anggota.status=='anak'? 'selected': ''}>Anak</option>
             </select>
             <select id="swal-input3" class="swal2-select" placeholder="Masukan Pendidikan Terakhir">
                 <option value="SD" ${anggota.pendidikan=='SD'? 'selected': ''}>SD</option>
@@ -1072,7 +1174,8 @@
                     const periode_kerja_akhir = document.getElementById('swal-input4').value;
                     const gaji_terakhir = document.getElementById('swal-input5').value;
 
-                    if (!nama_perusahaan || !alamat_perusahaan || !periode_kerja_awal || !periode_kerja_akhir || !gaji_terakhir ) {
+                    if (!nama_perusahaan || !alamat_perusahaan || !periode_kerja_awal || !periode_kerja_akhir ||
+                        !gaji_terakhir) {
                         Swal.showValidationMessage('Semua bidang harus diisi');
                         return false;
                     }
@@ -1130,7 +1233,8 @@
                     const periode_kerja_akhir = document.getElementById('swal-input4').value;
                     const gaji_terakhir = document.getElementById('swal-input5').value;
 
-                    if (!nama_perusahaan || !alamat_perusahaan || !periode_kerja_awal || !periode_kerja_akhir || !gaji_terakhir ) {
+                    if (!nama_perusahaan || !alamat_perusahaan || !periode_kerja_awal || !periode_kerja_akhir ||
+                        !gaji_terakhir) {
                         Swal.showValidationMessage('Semua bidang harus diisi');
                         return false;
                     }
@@ -1207,7 +1311,7 @@
                     const jurusan = document.getElementById('swal-input2').value;
                     const tahun_lulus = document.getElementById('swal-input3').value;
 
-                    if (!nama_institusi || !jurusan || !tahun_lulus ) {
+                    if (!nama_institusi || !jurusan || !tahun_lulus) {
                         Swal.showValidationMessage('Semua bidang harus diisi');
                         return false;
                     }
@@ -1251,7 +1355,7 @@
                 html: `
                     <input id="swal-input1" class="swal2-input" value="${pendidikan.nama_institusi}" placeholder="Masukan Nama Institusi">
                     <input id="swal-input2" class="swal2-input value="${pendidikan.jurusan}" placeholder="Masukan Jurusan">
-                    <input id="swal-input2" class="swal2-input" value="${pendidikan.tahun_lulus}" placeholder="Masukan Tahun Lulus">
+                    <input id="swal-input3" class="swal2-input" value="${pendidikan.tahun_lulus}" placeholder="Masukan Tahun Lulus">
                 `,
                 showCancelButton: true,
                 confirmButtonText: 'Update',
@@ -1260,7 +1364,7 @@
                     const jurusan = document.getElementById('swal-input2').value;
                     const tahun_lulus = document.getElementById('swal-input3').value;
 
-                    if (!nama_institusi || !jurusan || !tahun_lulus ) {
+                    if (!nama_institusi || !jurusan || !tahun_lulus) {
                         Swal.showValidationMessage('Semua bidang harus diisi');
                         return false;
                     }
@@ -1321,98 +1425,7 @@
             reader.readAsDataURL(flt);
         }
 
-        async function submitNext() {
-            let data = {
-                anggotaData: anggotaData,
-                nis: nis
-            };
-            if (list_anggota.length > 0 && anggotaData.length == 0) {
-                const activeTab = document.querySelector('#animateLine .nav-link.active');
 
-                // Mendapatkan tab berikutnya
-                const nextTab = activeTab.parentElement.nextElementSibling?.querySelector(
-                    '.nav-link');
-
-                if (nextTab) {
-                    // Mengaktifkan tab berikutnya
-                    new bootstrap.Tab(nextTab).show();
-                }
-            } else {
-                await fetch(`/api/register/data/anggota/${id_koperasi}`, {
-                        headers: {
-                            'Access-Control-Allow-Origin': '*',
-                            'Content-Type': 'application/json'
-                        },
-                        method: "POST",
-                        body: JSON.stringify(data)
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log(data)
-                        if (data.response_code == '00') {
-                            Swal.fire({
-                                title: "Status",
-                                text: data?.response_message,
-                                icon: "success",
-                                showCancelButton: true,
-                                confirmButtonText: 'Next',
-                                cancelButtonText: 'Cancel'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    const activeTab = document.querySelector(
-                                        '#animateLine .nav-link.active');
-
-                                    // Mendapatkan tab berikutnya
-                                    const nextTab = activeTab.parentElement.nextElementSibling
-                                        ?.querySelector(
-                                            '.nav-link');
-
-                                    if (nextTab) {
-                                        // Mengaktifkan tab berikutnya
-                                        new bootstrap.Tab(nextTab).show();
-                                    }
-                                } else {
-                                    console.log("error");
-                                }
-                            });
-                        } else {
-                            Swal.fire({
-                                title: "Status",
-                                text: data?.response_message,
-                                icon: "error",
-                                showCancelButton: true,
-                                confirmButtonText: 'Retry',
-                                cancelButtonText: 'Cancel'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    // handle retry logic here if needed
-                                } else {
-                                    console.log("error");
-                                }
-                            });
-                        }
-                    }).catch(err => {
-                        console.log(err);
-                        Swal.fire({
-                            title: "Status",
-                            text: err.message,
-                            icon: "info",
-                            showCancelButton: true,
-                            confirmButtonText: 'Retry',
-                            cancelButtonText: 'Cancel'
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                // handle retry logic here if needed
-                            } else {
-                                console.log("error");
-                            }
-                        });
-                    });
-
-            }
-
-
-        }
         async function saveData() {
             var no_anggota = document.getElementById("no_anggota").value;
             var nik = document.getElementById("nik").value;
@@ -1420,6 +1433,7 @@
             var usia_pasangan = document.getElementById('usia_pasangan').value;
             var pekerjaan_pasangan = document.getElementById('pekerjaan_pasangan').value;
             var pendidikan_pasangan = document.getElementById('pendidikan_pasangan').value;
+            var pendidikan_terakhir = document.getElementById('pendidikan_terakhir').value;
             var nama_lengkap = document.getElementById("nama_lengkap").value;
             var tempat_lahir = document.getElementById("tempat_lahir").value;
             var tanggal_lahir = document.getElementById("tanggal_lahir").value;
@@ -1440,14 +1454,42 @@
             var image_ktp = baseStringKtp;
             var validselfie = document.getElementById("selfie").files[0];
             var validktp = document.getElementById("ktp").files[0];
-
-            // Validasi input
-            if (validselfie == "" || validktp == "" || provinsi == '00' || kota == '00' || kecamatan == '00' || kelurahan ==
-                '00') {
+1            // Validasi input
+            if (validselfie == "" || validktp == "" || provinsi == '00' || kota == '00' || kecamatan == '00' ||
+                kelurahan ==
+                '00' || agama == "00" || status_pernikahan == "00" || pekerjaan == "00" || !kewarganegaraan || !tanggal_lahir || !nik || !nama_lengkap || !no_anggota || !email || !alamat || !kode_pos || anggotaKeluarga.length == 0) {
 
                 await Swal.fire({
                     title: "Perhatian!",
                     text: "Pastikan semua data terisi!",
+                    icon: "info",
+                    confirmButtonText: "OK"
+                });
+                return false;
+            } else if (
+                status_pernikahan == "Sudah Kawin" && !nama_pasangan && !nama_pasangan && !usia_pasangan && !pekerjaan_pasangan &&
+                !pendidikan_pasangan
+            ) {
+                await Swal.fire({
+                    title: "Perhatian!",
+                    text: "Pastikan data pasangan terisi!",
+                    icon: "info",
+                    confirmButtonText: "OK"
+                });
+                return false;
+            } else if (pendidikan_terakhir != 'Tidak Ada' && pendidikanData.length == 0) {
+                await Swal.fire({
+                    title: "Perhatian!",
+                    text: "Pastikan riwayat pendidikan terisi!",
+                    icon: "info",
+                    confirmButtonText: "OK"
+                });
+                return false;
+
+            } else if ((pekerjaan == 'Tidak Bekerja' && checkboxYa.checked == true &&  pekerjaanData.length == 0) || (pekerjaan == 'Tidak Bekerja' && checkboxYa.checked == false && checkboxTidak.checked == false &&  pekerjaanData.length == 0) || (pekerjaan != 'Tidak Bekerja' &&  pekerjaanData.length == 0)) {
+                await Swal.fire({
+                    title: "Perhatian!",
+                    text: "Pastikan riwayat pekerjaan terisi!",
                     icon: "info",
                     confirmButtonText: "OK"
                 });
@@ -1474,6 +1516,7 @@
                 jenis_kelamin: jenis_kelamin,
                 kelurahan: kelurahan,
                 kecamatan: kecamatan,
+                pendidikan_terakhir: pendidikan_terakhir,
                 kota: kota,
                 provinsi: provinsi,
                 kode_pos: kode_pos,
@@ -1541,6 +1584,9 @@
         }
     </script>
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script>
+        feather.replace();
+      </script>
     <script src="/assets/dashboard/src/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/dashboard/src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="/assets/dashboard/src/plugins/src/mousetrap/mousetrap.min.js"></script>

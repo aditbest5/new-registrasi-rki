@@ -168,12 +168,13 @@ class AnggotaController extends Controller
                 'tanggal_lahir' => 'required|date',
                 'jenis_kelamin' => 'required',
                 'anggotaKeluarga' => 'required|array',
-                'pendidikanData' => 'required|array',
-                'pekerjaanData' => 'required|array',
+                // 'pendidikanData' => 'required|array',
+                // 'pekerjaanData' => 'required|array',
                 'kelurahan' => 'required',
                 'kecamatan' => 'required',
                 'kota' => 'required',
                 'provinsi' => 'required',
+                'pendidikan_terakhir' => 'required',
                 'kode_pos' => 'required',
                 'agama' => 'required',
                 'status_pernikahan' => 'required',
@@ -231,6 +232,7 @@ class AnggotaController extends Controller
                 'kewarganegaraan' => $request->kewarganegaraan,
                 'alamat' => $request->alamat,
                 'nomor_hp' => $request->nomor_hp,
+                'pendidikan_terakhir' => $request->pendidikan_terakhir,
                 'email' => $request->email,
                 'nama_pasangan' => $request->nama_pasangan,
                 'usia_pasangan' => $request->usia_pasangan,
@@ -239,6 +241,7 @@ class AnggotaController extends Controller
                 'selfie' => $selfieUrl,
                 'ktp' => $ktpUrl,
                 'approval' => 1,
+                'otp' => null,
             ];
             // Insert into tbl_anggota
             $update_anggota = DB::table('tbl_anggota')->where('id', $id_anggota)->update($anggotaData);
