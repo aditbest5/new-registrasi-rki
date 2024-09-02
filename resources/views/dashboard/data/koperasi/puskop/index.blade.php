@@ -22,7 +22,8 @@
                             <th>ID</th>
                             <th>Nama Koperasi</th>
                             <th>Username</th>
-                            <th>nis</th>
+                            <th>NIS</th>
+                            <th>Status</th>
                             <th class="no-content">Action</th>
                         </tr>
                     </thead>
@@ -33,24 +34,20 @@
                                 <td>{{ $data->nama_koperasi }}</td>
                                 <td>{{ $data->username }}</td>
                                 <td>{{ $data->nis }}</td>
+                                <td>{{ $data->approval ? 'Lengkap' : 'Tidak Lengkap' }}</td>
                                 <td class="">
                                     @if ($data->approval)
                                         <button type="button" class="btn btn-warning"
                                             onclick="modalBtn({{ json_encode($data) }})" data-bs-toggle="modal"
-                                            data-bs-target="#modalInkop">Detail </button>
+                                            data-bs-target="#modalInkop" >Detail </button>
                                         <a href="/list_primkop_puskop/{{ $data->id }}" class="btn btn-info"> Primkop
                                         </a>
                                     @else
                                         <button type="button" class="btn btn-warning"
                                             onclick="modalBtn({{ json_encode($data) }})" data-bs-toggle="modal"
-                                            data-bs-target="#modalInkop">Detail </button>
+                                            data-bs-target="#modalInkop" disabled>Detail </button>
                                         <a href="/list_primkop_puskop/{{ $data->id }}" class="btn btn btn-info"> Primkop
                                         </a>
-                                        <button onclick="rejectBtn({{ $data->id }}, '{{ $data->email_koperasi }}')"
-                                            class="btn btn-danger"> Reject </button>
-                                        <button
-                                            onclick="approveBtn({{ $data->id }}, '{{ $data->username }}','{{ $data->email_koperasi }}')"
-                                            class="btn btn-warning"> Approve </button>
                                     @endif
                                 </td>
                             </tr>
@@ -210,115 +207,6 @@
             document.getElementById('no_sertifikat').innerText = data.no_sertifikat_koperasi
         }
 
-        function approveBtn(id, username, email) {
-            let data = {
-                username,
-                email
-            };
-            swal({
-                title: "Approve",
-                text: 'Apakah data sudah benar?',
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-            }).then((willOut) => {
-                if (willOut) {
-                    fetch(`/api/approve/send-mail/koperasi/${id}`, {
-                            headers: {
-                                'Access-Control-Allow-Origin': '*',
-                                'Content-Type': 'application/json'
-                            },
-                            method: "POST",
-                            body: JSON.stringify(data)
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log(data)
-                            if (data.response_code == '00') {
-                                swal("Berhasil Approve!", {
-                                    icon: "success",
-                                });
-                                window.location = '/list_puskop'
-                            } else {
-                                swal("Gagal Approve!", {
-                                    icon: "info",
-                                });
-                            }
-                        }).catch(err => {
-                            console.log(err);
-                            swal("Gagal Approve!", {
-                                icon: "info",
-                            });
-                        });
 
-                } else {
-
-                }
-            }).catch(err => {
-                swal("Gagal approve data!\nCoba lagi", {
-                    icon: "error",
-                });
-            });
-        }
-
-        function rejectBtn(id, email) {
-            let data = {
-                email,
-            };
-            swal({
-                title: "Reject",
-                text: 'Apakah Anda yakin menolak koperasi ini?',
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-            }).then((willOut) => {
-                if (willOut) {
-                    swal({
-                        text: 'Berikan alasan Anda',
-                        content: "input",
-                        button: {
-                            text: "Submit",
-                            closeModal: false,
-                        },
-                    }).then((value) => {
-                        data['alasan'] = value
-                        console.log(data);
-                        fetch(`/api/reject/send-mail/koperasi/${id}`, {
-                            headers: {
-                                'Access-Control-Allow-Origin': '*',
-                                'Content-Type': 'application/json'
-                            },
-                            method: "DELETE",
-                            body: JSON.stringify(data)
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log(data)
-                            if (data.response_code == '00') {
-                                swal("Berhasil Reject!", {
-                                    icon: "success",
-                                });
-                                window.location = '/list_puskop'
-                            } else {
-                                swal("Gagal Reject!", {
-                                    icon: "info",
-                                });
-                            }
-                        }).catch(err => {
-                            console.log(err);
-                            swal("Gagal Reject!", {
-                                icon: "info",
-                            });
-                        });
-                    });
-                } else {
-
-                }
-            }).catch(err => {
-                swal("Gagal approve data!\nCoba lagi", {
-                    icon: "error",
-                });
-            });
-        }
     </script>
 @endsection
